@@ -122,8 +122,3 @@ def backward(mat):
                                           i = t[0]
                                           j = t[1]
               return mat,maxScore
-
-
-
-
-                                          
