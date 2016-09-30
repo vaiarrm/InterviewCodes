@@ -45,3 +45,55 @@ public class Solution {
 	    return head.next;
 }
 }
+
+/*
+
+# Python Quadratic time solution
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    # @param A : list of linked list
+    # @return the head node in the linked list
+    def mergeKLists(self, A):
+        if A == None or len(A) == 0:
+            return list()
+        if len(A) == 1:
+            return A[0]
+        
+        head = ListNode(1)
+        head.next = A[0]
+        for i in range(1,len(A)):
+            f = head.next
+            s = A[i]
+            if s == None:
+                continue
+            if f == None:
+                head.next = s
+                continue
+            if f != None and s != None:
+                if f.val > s.val:
+                    head.next = s
+                    s = f
+                    f = head.next
+            
+            prev = head
+            while f != None and s != None:
+                if f.val < s.val:
+                    f = f.next
+                    prev = prev.next
+                else:
+                    temp = s.next
+                    prev.next = s
+                    s.next = f
+                    prev = s
+                    s = temp
+                if s!= None:
+                    prev.next = s 
+                    
+            return head.next
+*/
