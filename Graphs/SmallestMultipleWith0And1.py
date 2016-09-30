@@ -1,3 +1,7 @@
+#You are given an integer N. You have to find smallest multiple of N which consists of digits 0 and 1 only.
+#Since this multiple could be large, return it in form of a string.
+
+
 from collections import deque
 class Solution:
     # @param A : integer
