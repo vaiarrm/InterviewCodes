@@ -92,8 +92,8 @@ class Solution:
                     s.next = f
                     prev = s
                     s = temp
-                if s!= None:
+            if s!= None:
                     prev.next = s 
                     
-            return head.next
+        return head.next
 */
