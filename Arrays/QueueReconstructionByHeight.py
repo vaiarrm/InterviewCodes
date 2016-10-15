@@ -20,23 +20,48 @@ Output:
 
 """
 class Solution(object):
+    def swap(self, people,i,j):
+        temp = people[j]
+        people[j] = people[i]
+        people[i] = temp
+        
     def reconstructQueue(self, people):
         """
         :type people: List[List[int]]
         :rtype: List[List[int]]
         """
         
-        people.sort(key = lambda x: x[1])
-        
-        for i in range(1,len(people)):
-            count = people[i][1]
-            curr
+        people.sort() #O(NLgN)
+        people.reverse() #O(N)
+        print "after reverse"
+        print people
+        for i in range(1,len(people)): #(N^2)
+            self.swap(people,i,0)
+            count = 0
             for j in range(i):
-                if people[j][0] >= people[i][0]:
-                    curr += 1
-                if curr == count:
-                    break
-            if i == j+1:
-                pass
+                ht = people[i][0]
+                num = people[i][1]
+                if ht <= people[j][0]:
+                    count += 1
+                if count > num:
+                    if j == len(people) - 1:
+                        continue
+                    self.swap(people,i,j)
+                    self.swap(people,j,j+1)
+                    count = 0
+                if count == num:
+                    if j == len(people) - 1:
+                        continue  
+                    self.swap(people,i,j)
+                    self.swap(people,j,j+1)
+                    count = 0
+            print 
+            print people
+
+        return people
+p = [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
+s = Solution()
+s.reconstructQueue(p)                
+                    
                 
         
