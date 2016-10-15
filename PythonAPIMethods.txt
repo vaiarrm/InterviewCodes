@@ -1,0 +1,8 @@
+Python APIs/Methods:
+
+String:
+	- Immutable datatype
+	- "1".isdigit()
+
+List:
+	- Mutable Datatype
