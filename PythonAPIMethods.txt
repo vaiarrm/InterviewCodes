@@ -3,6 +3,7 @@ Python APIs/Methods:
 String:
 	- Immutable datatype
 	- "1".isdigit()
+	- str.isalnum() - 
 
 List:
 	- Mutable Datatype
