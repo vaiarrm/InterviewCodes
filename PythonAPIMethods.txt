@@ -4,6 +4,48 @@ String:
 	- Immutable datatype
 	- "1".isdigit()
 	- str.isalnum() - 
+	- str.isalpha()
+	- str.count("what") - > Count the number of time "what" occurs in the string
+	- str.endwith("what") -> checks if the string ends with a suffix "what"
+	- str.find(sub) -> returns the lowest index where sub string is found
+	- str.index(sub) -> same as str.find() but raises value error
+	- 
 
 List:
 	- Mutable Datatype
+
+
+Collections:
+ex. from collections import deque
+
+deque:
+	Build an ordered collection with optimized access from its endpoints.
+Methods:
+1. append(...) 
+		Add an element to the right side of the deque.
+2. appendleft(...)
+       Add an element to the left side of the deque.
+3. clear(...)
+       Remove all elements from the deque.
+4. count(...)
+       D.count(value) -> integer -- return number of occurrences of value
+5.extend(...)
+       Extend the right side of the deque with elements from the iterable
+6. extendleft(...)
+       Extend the left side of the deque with elements from the iterable
+7. pop(...)
+       Remove and return the rightmost element.
+8. popleft(...)
+       Remove and return the leftmost element.
+9. remove(...)
+       D.remove(value) -- remove first occurrence of value.
+10.reverse(...)
+       D.reverse() -- reverse *IN PLACE*
+11.rotate(...)
+       Rotate the deque n steps to the right (default n=1).  If n is negative, rotates left.	
+
+Itertools:
+ex. from itertools import permutations
+
+permutations:
+       
