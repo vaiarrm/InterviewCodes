@@ -144,6 +144,14 @@ Methods:
 
 Itertools:
 ex. from itertools import permutations
+accumulate:
+	Make an iterator that returns accumulated sums, or accumulated results of other binary functions (specified via the optional func argument). If func is supplied, it should be a function of two arguments. Elements of the input iterable may be any type that can be accepted as arguments to func. (For example, with the default operation of addition, elements may be any addable type including Decimal or Fraction.) If the input iterable is empty, the output iterable will also be empty.
+	data = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+	list(accumulate(data, operator.mul))
+	[3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]
 
 permutations:
+	Return successive r length permutations of elements in the iterable. If r is not specified or is None, then r defaults to the length of the iterable and all possible full-length permutations are generated. Permutations are emitted in lexicographic sort order. So, if the input iterable is sorted, the permutation tuples will be produced in sorted order.Elements are treated as unique based on their position, not on their value. So if the input elements are unique, there will be no repeat values in each permutation.
+
+
        
