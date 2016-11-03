@@ -18,6 +18,15 @@ sorted(iterable[, cmp[, key[, reverse]]])
 		2. 	from operator import itemgetter
 			sorted(l,key=itemgetter(0))
 
+staticmethod(function):
+	Return a static method for function.
+	Usage:
+		class C:
+    		@staticmethod
+    		def f(arg1, arg2, ...):
+
+
+
 String:
 	- Immutable datatype
 	- "1".isdigit()
