@@ -1,5 +1,23 @@
 Python APIs/Methods:
 
+Methods:
+all()
+	Return True if all elements of the iterable are true (or if the iterable is empty).
+	ex:
+		lst = range(10)
+		all( type(i) is int for i in lst )
+		all(isinstance(i, int) for i in my_list)
+any()
+	Return True if any element of the iterable is true. If the iterable is empty, return False.
+
+sorted(iterable[, cmp[, key[, reverse]]])
+	Return a new sorted list from the items in iterable.	
+	ex:
+		l = [("r",1),("p",1),("a",1),("f",1),("g",1)]
+		1. sorted(l,cmp=lambda x,y:cmp(x[0],y[0])
+		2. 	from operator import itemgetter
+			sorted(l,key=itemgetter(0))
+
 String:
 	- Immutable datatype
 	- "1".isdigit()
@@ -13,6 +31,77 @@ String:
 
 List:
 	- Mutable Datatype
+
+
+Set:
+s = set([1,2,3])
+{1, 2, 3}
+a = set([3,4,5])
+
+add(...)
+       Add an element to a set.
+       
+       This has no effect if the element is already present.
+   
+   clear(...)
+       Remove all elements from this set.
+   
+   copy(...)
+       Return a shallow copy of a set.
+   
+   difference(...)
+       Return the difference of two or more sets as a new set. (i.e. all elements that are in this set but not the others.)
+       s.difference(a)
+   
+   difference_update(...)
+       Remove all elements of another set from this set.
+   
+   discard(...)
+       Remove an element from a set if it is a member. If the element is not a member, do nothing.
+       a.discard(4)
+   
+   intersection(...)
+       Return the intersection of two or more sets as a new set. (i.e. elements that are common to all of the sets.)
+       a.intersection(s)
+   
+   intersection_update(...)
+       Update a set with the intersection of itself and another.
+       a.intersection_update(s)
+       a -> {3}
+   
+   isdisjoint(...)
+       Return True if two sets have a null intersection.
+       a.isdisjoint(s)
+   
+   issubset(...)
+       Report whether another set contains this set.
+   
+   issuperset(...)
+       Report whether this set contains another set.
+   
+   pop(...)
+       Remove and return an arbitrary set element.
+       Raises KeyError if the set is empty.
+   
+   remove(...)
+       Remove an element from a set; it must be a member.
+       
+       If the element is not a member, raise a KeyError.
+   
+   symmetric_difference(...)
+       Return the symmetric difference of two sets as a new set. (i.e. all elements that are in exactly one of the sets.)
+       OPPOSITE OF INTERSECTION
+       a.symmetric_difference(s) -> {1, 2, 4, 5}
+   
+   symmetric_difference_update(...)
+       Update a set with the symmetric difference of itself and another. INPLACE
+   
+   union(...)
+       Return the union of sets as a new set. (i.e. all elements that are in either set.)
+   
+   update(...)
+       Update a set with the union of itself and others. INPLACE
+       s.update(a)
 
 
 Collections:
